@@ -6,7 +6,7 @@ The ASF licenses this file to You under the Apache License, Version 2.0
 (the "License"); you may not use this file except in compliance with
 the License.  You may obtain a copy of the License at
 
-    http://www.apache.org/licenses/LICENSE-2.0
+    http://www.dreaminglwj.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
@@ -30,11 +30,11 @@ import (
 	"github.com/pkg/errors"
 	"github.com/tidwall/gjson"
 
-	"github.com/apache/rocketmq-client-go/internal"
-	"github.com/apache/rocketmq-client-go/internal/remote"
-	"github.com/apache/rocketmq-client-go/internal/utils"
-	"github.com/apache/rocketmq-client-go/primitive"
-	"github.com/apache/rocketmq-client-go/rlog"
+	"github.com/dreaminglwj/rocketmq-client-go/internal"
+	"github.com/dreaminglwj/rocketmq-client-go/internal/remote"
+	"github.com/dreaminglwj/rocketmq-client-go/internal/utils"
+	"github.com/dreaminglwj/rocketmq-client-go/primitive"
+	"github.com/dreaminglwj/rocketmq-client-go/rlog"
 )
 
 const (
@@ -234,7 +234,7 @@ type defaultConsumer struct {
 	 * load balance. It's required and needs to be globally unique.
 	 * </p>
 	 *
-	 * See <a href="http://rocketmq.apache.org/docs/core-concept/">here</a> for further discussion.
+	 * See <a href="http://rocketmq.dreaminglwj.org/docs/core-concept/">here</a> for further discussion.
 	 */
 	consumerGroup  string
 	model          MessageModel

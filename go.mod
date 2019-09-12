@@ -1,4 +1,4 @@
-module github.com/apache/rocketmq-client-go
+module github.com/dreaminglwj/rocketmq-client-go
 
 require (
 	github.com/agiledragon/gomonkey v0.0.0-20190517145658-8fa491f7b918

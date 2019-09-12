@@ -6,7 +6,7 @@ The ASF licenses this file to You under the Apache License, Version 2.0
 (the "License"); you may not use this file except in compliance with
 the License.  You may obtain a copy of the License at
 
-    http://www.apache.org/licenses/LICENSE-2.0
+    http://www.dreaminglwj.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
@@ -22,10 +22,10 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/apache/rocketmq-client-go"
-	"github.com/apache/rocketmq-client-go/consumer"
-	"github.com/apache/rocketmq-client-go/primitive"
-	"github.com/apache/rocketmq-client-go/rlog"
+	"github.com/dreaminglwj/rocketmq-client-go"
+	"github.com/dreaminglwj/rocketmq-client-go/consumer"
+	"github.com/dreaminglwj/rocketmq-client-go/primitive"
+	"github.com/dreaminglwj/rocketmq-client-go/rlog"
 )
 
 func main() {
