@@ -52,12 +52,12 @@ type defaultProducer struct {
 
 func NewDefaultProducer(opts ...Option) (*defaultProducer, error) {
 	defaultOpts := defaultProducerOptions()
-	fmt.Errorf("opts: %v \n defaultOpts: %v", opts, defaultOpts)
+	rlog.Infof("opts: %v \n defaultOpts: %v", opts, defaultOpts)
 
 	for _, apply := range opts {
 		apply(&defaultOpts)
 	}
-	fmt.Errorf("opts: %v \n defaultOpts: %v", opts, defaultOpts)
+	rlog.Infof("opts: %v \n defaultOpts: %v", opts, defaultOpts)
 	srvs, err := internal.NewNamesrv(defaultOpts.NameServerAddrs)
 	if err != nil {
 		return nil, errors.Wrap(err, "new Namesrv failed.")
