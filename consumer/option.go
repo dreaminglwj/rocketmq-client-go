@@ -213,3 +213,19 @@ func WithStrategy(strategy AllocateStrategy) Option {
 		opts.Strategy = strategy
 	}
 }
+
+func WithPullBatchSize(sz int32) Option {
+	return func(opts *consumerOptions) {
+		if sz <= 0 || sz > 32 {
+			opts.PullBatchSize = 1
+		} else {
+			opts.PullBatchSize = sz
+		}
+	}
+}
+
+func WithConsumeMessageBatchMaxSize(size int) Option {
+	return func(opts *consumerOptions) {
+		opts.ConsumeMessageBatchMaxSize = size
+	}
+}
