@@ -784,7 +784,7 @@ func (pc *pushConsumer) consumeMessageCurrently(pq *processQueue, mq *primitive.
 
 func (pc *pushConsumer) consumeMessageOrderly(pq *processQueue, mq *primitive.MessageQueue) {
 	if pq.dropped {
-		rlog.Warn("the message queue not be able to consume, because it's dropped.")
+		//rlog.Warn("the message queue not be able to consume, because it's dropped.")
 		return
 	}
 
@@ -797,7 +797,7 @@ func (pc *pushConsumer) consumeMessageOrderly(pq *processQueue, mq *primitive.Me
 		continueConsume := true
 		for continueConsume {
 			if pq.dropped {
-				rlog.Warn("the message queue not be able to consume, because it's dropped. %v", mq)
+				//rlog.Warn("the message queue not be able to consume, because it's dropped. %v", mq)
 				break
 			}
 			if pc.model == Clustering {
@@ -905,7 +905,7 @@ func (pc *pushConsumer) consumeMessageOrderly(pq *processQueue, mq *primitive.Me
 		}
 	} else {
 		if pq.dropped {
-			rlog.Warn("the message queue not be able to consume, because it's dropped. %v", mq)
+			//rlog.Warn("the message queue not be able to consume, because it's dropped. %v", mq)
 		}
 		pc.tryLockLaterAndReconsume(mq, 100)
 	}
