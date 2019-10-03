@@ -372,7 +372,8 @@ func (c *rmqClient) SendHeartbeatToAllBrokerWithLock() {
 					c.namesrvs.brokerVersionMap.Store(brokerName, m)
 				}
 				m[brokerName] = int32(response.Version)
-				rlog.Debugf("send heart beat to broker[%s %d %s] success", brokerName, id, addr)
+				//rlog.Debugf("send heart beat to broker[%s %d %s] success", brokerName, id, addr)
+				rlog.Infof("send heart beat to broker[%s %d %s] success", brokerName, id, addr)
 			}
 		}
 		return true
